@@ -30,7 +30,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Chiến lược địa phương cho admin
+//admin
 passport.use('admin', new LocalStrategy(async (username, password, done) => {
     try {
         const nhanvienService = new NhanvienService(MongoDB.client);
@@ -44,7 +44,7 @@ passport.use('admin', new LocalStrategy(async (username, password, done) => {
     }
 }));
 
-// Chiến lược địa phương cho user
+//user
 passport.use('user', new LocalStrategy(async (username, password, done) => {
     try {
         const docgiaService = new DocgiaService(MongoDB.client);
@@ -63,11 +63,11 @@ passport.serializeUser((user, done) => {
     if (user.CHUCVU) { 
         console.log('admin');
         console.log(user);
-        done(null, { id: user._id, role: 'admin' }); // Thực hiện serializeUser cho admin
-    } else if (user.TEN) { // Nếu user có thuộc tính TEN
+        done(null, { id: user._id, role: 'admin' });
+    } else if (user.TEN) {
         console.log('user');
         console.log(user);
-        done(null, { id: user._id, role: 'user' }); // Thực hiện serializeUser cho user
+        done(null, { id: user._id, role: 'user' }); 
     }
 });
 
@@ -83,7 +83,7 @@ passport.deserializeUser(async (data, done) => {
         } catch (error) {
             return done(error);
         }
-    } else if (data.role === 'user') { // Nếu user có role là user
+    } else if (data.role === 'user') {
         const docgiaService = new DocgiaService(MongoDB.client);
         try {
             const user = await docgiaService.findById(data.id);

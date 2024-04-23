@@ -42,7 +42,7 @@ class ContactService {
     }
     async authenticate(username, password) {
         try {
-            console.log(`user kt:::${username},:::${password}`);
+            console.log(`Dữ liệu đăng nhập user:::${username},:::${password}`);
             const user = await this.DOCGIA.findOne({ TEN: username, DIENTHOAI:password });
             if (!user) {
                 return null; // Không tìm thấy người dùng
