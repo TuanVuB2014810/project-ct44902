@@ -1,9 +1,9 @@
 <template>
     <div class="page row">
         <div class="mt-3 col-md-12">
-            <h4 class="text-center my-3">
-                Thông tin mượn sách
-            </h4>
+            <h3 class="text-center my-3">
+                Danh Sách Mượn
+            </h3>
             <DanhSachMuon v-if="DanhSachMuon.length > 0" v-model:activeIndex="activeIndex" :DanhSachMuon="DanhSachMuon"
                 @updateDanhSachMuon="updateDanhSachMuon" />
             <p v-else>Không có mượn sách nào.</p>

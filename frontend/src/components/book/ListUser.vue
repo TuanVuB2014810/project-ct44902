@@ -14,7 +14,6 @@
                     <a href="#" class="btn btn-outline-primary" @click="muonSach(book._id)">Mượn sách</a>
                 </div>
             </div>
-
         </div>
     </div>
 </template>
