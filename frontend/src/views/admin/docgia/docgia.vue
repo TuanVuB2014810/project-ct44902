@@ -46,8 +46,8 @@ export default {
         },
         docgiaString() {
             return this.docgias.map((docgia) => {
-                const { TEN } = docgia;
-                return [TEN].join("");
+                const { TEN, HOLOT, PHAI, DIACHI, DIENTHOAI} = docgia;
+                return [TEN, HOLOT, PHAI, DIACHI, DIENTHOAI].join("");
             });
         },
         filteredDocgias() {
