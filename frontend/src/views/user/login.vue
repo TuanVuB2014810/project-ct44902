@@ -47,7 +47,7 @@
             this.error = 'Tên đăng nhập hoặc mật khẩu không chính xác.';
           }
         } catch (error) {
-          this.error = 'Đăng nhập không thành công';
+          this.error = 'Đăng nhập không thành công! Vui lòng thử lại sau.';
         }
       }
     },

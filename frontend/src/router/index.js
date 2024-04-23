@@ -120,7 +120,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    console.log("middelware");
+    console.log("middleware");
     console.log(store.getters.loggedInUser);
 
 

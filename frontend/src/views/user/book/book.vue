@@ -48,15 +48,17 @@ export default {
         },
         bookString() {
             return this.Books.map((book) => {
-                const { TENSACH, DONGIA, SOQUYEN, NAMXUATBAN, TenNxb, TACGIA } = book;
-                return [TENSACH, DONGIA, SOQUYEN, NAMXUATBAN, TenNxb, TACGIA].join("");
+                const { TENSACH, DONGIA, SOQUYEN, NAMXUATBAN, TENNXB, TACGIA } = book;
+                return [TENSACH, DONGIA, SOQUYEN, NAMXUATBAN, TENNXB, TACGIA].join("");
             });
         },
         filteredBooks() {
             if (!this.searchText) return this.Books;
-            return this.Books.filter((_book, index) =>
-                this.bookString[index].includes(this.searchText)
-            );
+            const searchTextLower = this.searchText.toLowerCase(); // Chuyển đổi chuỗi tìm kiếm thành chữ thường
+            return this.Books.filter((book, index) => {
+                const bookStringLower = this.bookString[index].toLowerCase(); // Chuyển đổi chuỗi sách thành chữ thường
+                return bookStringLower.includes(searchTextLower);
+            });
         },
     },
     methods: {

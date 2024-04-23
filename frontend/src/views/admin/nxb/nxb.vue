@@ -2,7 +2,7 @@
     <div class="page row">
         <div class="mt-3 col-md-12">
             <h3 class="text-center my-3">
-                Nhà xuất bản
+                Nhà Xuất Bản
             </h3>
             <div class="my-3 row justify-content-between align-items-center">
                 <router-link :to="{ name: 'nxb.add' }" class="px-3 col-sm-3">

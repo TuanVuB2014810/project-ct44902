@@ -36,14 +36,13 @@ export default {
 
           localStorage.setItem('loggedInUser', JSON.stringify({ username: response.user.HOTENNV, id: response.user._id ,role:"admin"}));
           this.setLoggedInUser({ username: response.user.HOTENNV, id: response.user._id, role: "admin" });
-      //  console.log('loggedInUser:',loggedInUser.role);
           
           this.$router.push('/quanly');
         } else {
           this.error = 'Tên đăng nhập hoặc mật khẩu không chính xác.';
         }
       } catch (error) {
-        this.error = 'Đăng nhập không thành công. Vui lòng thử lại.';
+        this.error = 'ăng nhập không thành công! Vui lòng thử lại sau.';
       }
     }
   },
