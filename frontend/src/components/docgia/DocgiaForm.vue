@@ -3,37 +3,37 @@
     <div class="form-group">
       <label for="HOLOT">Họ và chữ lót</label>
       <Field name="HOLOT" type="text" class="form-control" v-if="docgiaLocal && docgiaLocal._id" v-model="docgiaLocal.HOLOT" />
-      <Field name="HOLOT" type="text" class="form-control" placeholder=" Nhập tên" v-else @input="updateContact('HOLOT', $event.target.value)" ></Field>
+      <Field name="HOLOT" type="text" class="form-control" placeholder=" Nhập họ và chữ lót" v-else @input="updateContact('HOLOT', $event.target.value)" ></Field>
       <ErrorMessage name="HOLOT" class="error-feedback" />
     </div>
     <div class="form-group">
       <label for="TEN">Tên</label>
       <Field name="TEN" type="text" class="form-control" v-if="docgiaLocal && docgiaLocal._id" v-model="docgiaLocal.TEN" />
-      <Field name="TEN" type="text" class="form-control" placeholder=" Nhập đơn giá" v-else @input="updateContact('TEN', $event.target.value)" ></Field>
+      <Field name="TEN" type="text" class="form-control" placeholder=" Nhập tên" v-else @input="updateContact('TEN', $event.target.value)" ></Field>
       <ErrorMessage name="TEN" class="error-feedback" />
     </div>
     <div class="form-group">
       <label for="NGAYSINH">Ngày sinh</label>
       <Field name="NGAYSINH" type="text" class="form-control" v-if="docgiaLocal && docgiaLocal._id" v-model="docgiaLocal.NGAYSINH" />
-      <Field name="NGAYSINH" type="text" class="form-control" placeholder=" Nhập số quyển" v-else @input="updateContact('NGAYSINH', $event.target.value)" ></Field>
+      <Field name="NGAYSINH" type="text" class="form-control" placeholder=" Nhập ngày sinh" v-else @input="updateContact('NGAYSINH', $event.target.value)" ></Field>
       <ErrorMessage name="NGAYSINH" class="error-feedback" />
     </div>
     <div class="form-group">
       <label for="PHAI">Giới tính</label>
       <Field name="PHAI" type="text" class="form-control" v-if="docgiaLocal && docgiaLocal._id" v-model="docgiaLocal.PHAI" />
-      <Field name="PHAI" type="text" class="form-control" placeholder=" Nhập năm xuất bản" v-else @input="updateContact('PHAI', $event.target.value)" ></Field>
+      <Field name="PHAI" type="text" class="form-control" placeholder=" Nhập giới tính" v-else @input="updateContact('PHAI', $event.target.value)" ></Field>
       <ErrorMessage name="PHAI" class="error-feedback" />
     </div>
     <div class="form-group">
       <label for="DIACHI">Địa chỉ</label>
       <Field name="DIACHI" type="text" class="form-control" v-if="docgiaLocal && docgiaLocal._id" v-model="docgiaLocal.DIACHI" />
-      <Field name="DIACHI" type="text" class="form-control" placeholder="Tác giả" v-else @input="updateContact('DIACHI', $event.target.value)" ></Field>
+      <Field name="DIACHI" type="text" class="form-control" placeholder="Nhập địa chỉ" v-else @input="updateContact('DIACHI', $event.target.value)" ></Field>
       <ErrorMessage name="DIACHI" class="error-feedback" />
     </div>
     <div class="form-group">
       <label for="DIENTHOAI">Số điện thoại</label>
       <Field name="DIENTHOAI" type="text" class="form-control" v-if="docgiaLocal && docgiaLocal._id" v-model="docgiaLocal.DIENTHOAI" />
-      <Field name="DIENTHOAI" type="text" class="form-control" placeholder="Tác giả" v-else @input="updateContact('DIENTHOAI', $event.target.value)" ></Field>
+      <Field name="DIENTHOAI" type="text" class="form-control" placeholder="Nhập số điện thoại" v-else @input="updateContact('DIENTHOAI', $event.target.value)" ></Field>
       <ErrorMessage name="DIENTHOAI" class="error-feedback" />
     </div>
     <div class="form-group">
