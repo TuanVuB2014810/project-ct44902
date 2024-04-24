@@ -14,7 +14,7 @@
       </li>
       <li class="mx-3">
         <router-link :to="{ name: 'docgia.admin' }" class="nav-link text-light">
-          <i class="fa-solid fa-book" style="color: #ffffff;"></i> Đọc giả
+          <i class="fa-solid fa-user" style="color: #ffffff;"></i> Đọc giả
         </router-link>
       </li>
       <li>
